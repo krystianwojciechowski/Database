@@ -15,6 +15,7 @@ namespace Database.Client {
 		public override void Connect()
 		{
 			this.client = new MongoClient(DbUrl);
+			//@todo add write and read concern
 		}
 
         public override void SelectDatabase()
