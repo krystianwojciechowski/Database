@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Database.Attributes
 {
-    internal class MongoCollection : Attribute
+    public class MongoCollection : Attribute
     {
         public string CollectionName { get; set; }
 

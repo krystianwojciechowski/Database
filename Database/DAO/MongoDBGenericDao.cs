@@ -10,6 +10,9 @@ using MongoDB.Driver;
 using Database.DAO.Filters;
 using System.Reflection;
 using Database.BaseEntities;
+using MongoDB.Bson;
+using System.Reflection.Metadata;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Database.DAO
 {
@@ -44,19 +47,28 @@ namespace Database.DAO
             this.client = client;
         }
 
-        public override void Delete(Filter<F> filter, params T[] elements)
+        private FilterDefinition<T> GetFilter(T entity)
+        {
+            return Builders<T>.Filter.Eq("_id", entity.Id);
+        }
+
+        public override void Delete(params T[] elements)
         {
             var collection = this.GetCollection();
-           
-            if(elements.Length == 1)
+            if (elements.Length == 1)
             {
-                collection.DeleteOne(filter.filter);
-            } else if(elements.Length == 0 || elements == null)
+                var filter = this.GetFilter(elements[0]);
+                collection.DeleteOne(filter);
+            } else if (elements.Length == 0 || elements == null)
             {
                 throw new Exception("The elements parameter can't be empty");
             } else
             {
-                collection.DeleteMany(filter.filter);
+                for (int i = 0; i < elements.Length; i++)
+                {
+                    collection.DeleteOne(this.GetFilter(elements[i]));
+                }
+                
             }
         }
 
@@ -70,15 +82,19 @@ namespace Database.DAO
             var collection = this.GetCollection();
             if (elements.Length == 1)
             {
-                collection.InsertOne(elements[0]);
+             
+              collection.WithWriteConcern(WriteConcern.Acknowledged).InsertOne(elements[0]);
+             
             }
             else if (elements == null || elements.Length == 0) {
                 throw new Exception("The elements parameter can't be empty");
             }
             else
             {
-                collection.InsertMany(elements);
+                collection.WithWriteConcern(WriteConcern.Acknowledged).InsertMany(elements);
             }
+
+     
         }
         
         public override void Update(params T[] elements)
