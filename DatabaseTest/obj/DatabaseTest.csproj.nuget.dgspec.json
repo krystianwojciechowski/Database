@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj": {}
+  },
+  "projects": {
+    "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj",
+        "projectName": "Database",
+        "projectPath": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj",
+        "packagesPath": "/Users/krystianwojciechowski/.nuget/packages/",
+        "outputPath": "/Users/krystianwojciechowski/Projects/Database/Database/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/krystianwojciechowski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj",
+        "projectName": "DatabaseTest",
+        "projectPath": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj",
+        "packagesPath": "/Users/krystianwojciechowski/.nuget/packages/",
+        "outputPath": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/krystianwojciechowski/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj": {
+                "projectPath": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[34.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

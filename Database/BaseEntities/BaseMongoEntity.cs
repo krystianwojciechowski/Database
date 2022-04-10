@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Database.BaseEntities
 {
     public class BaseMongoEntity
     {
-        public int Id { get; set; }
+        [BsonElement("_id")]
+        [BsonId]
+        public ObjectId Id { get; set; }
     }
 }

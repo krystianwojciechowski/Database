@@ -20,6 +20,10 @@ namespace Database
             }
         }
 
+        public static Client.Client GetClient(Database type, string path)
+        {
+            return null;
+        }
 
 
 
