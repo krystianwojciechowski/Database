@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Database.DAO
 {
-    public abstract class DAO<T,F>
+    public abstract class DAO<T>
     {
 
         public abstract void Insert(params T[] elements);
@@ -15,7 +15,9 @@ namespace Database.DAO
         
         public abstract void Delete( params T[] elements);
 
-        public abstract T Get(Filter<F> filter, T element);
+        public abstract void Delete(T entity);
+
+        public abstract List<T> Get(T element);
 
     }
 }

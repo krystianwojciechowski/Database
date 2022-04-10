@@ -13,13 +13,13 @@ using Database.BaseEntities;
 using MongoDB.Bson;
 using System.Reflection.Metadata;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Collections;
 
 namespace Database.DAO
 {
    
-    public class MongoDBGenericDao<T,F>: DAO<T, F> 
+    public class MongoDBGenericDao<T>: DAO<T> 
         where T : BaseMongoEntity 
-        where F : FilterDefinition<T>
     {
         private MongoDBClient client;
 
@@ -47,34 +47,70 @@ namespace Database.DAO
             this.client = client;
         }
 
-        private FilterDefinition<T> GetFilter(T entity)
+        private FilterDefinition<T> GetFilter(T entity,bool byId = false, bool findNulls = false)
         {
-            return Builders<T>.Filter.Eq("_id", entity.Id);
+
+            if (byId)
+            {
+                return Builders<T>.Filter.Eq("_id", entity.Id);
+            }
+
+            var list = new List<FilterDefinition<T>>();
+
+            foreach(PropertyInfo property in typeof(T).GetProperties())
+            {
+                var attribute = property.GetCustomAttribute<BsonElementAttribute>();
+
+                if (attribute != null && attribute.ElementName != "_id" && (findNulls || property.GetValue(entity) != null)) { 
+                 var fieldName = attribute.ElementName;
+                    list.Add(Builders<T>.Filter.Eq(fieldName, property.GetValue(entity).ToString()));
+                }
+
+            }
+            return Builders<T>.Filter.And(list.ToArray<FilterDefinition<T>>());
         }
 
         public override void Delete(params T[] elements)
         {
             var collection = this.GetCollection();
-            if (elements.Length == 1)
-            {
-                var filter = this.GetFilter(elements[0]);
-                collection.DeleteOne(filter);
-            } else if (elements.Length == 0 || elements == null)
+            if (elements.Length == 0 || elements == null)
             {
                 throw new Exception("The elements parameter can't be empty");
             } else
             {
+                //@todo perform performance tests
+                var filters = new List<FilterDefinition<T>>();
                 for (int i = 0; i < elements.Length; i++)
                 {
-                    collection.DeleteOne(this.GetFilter(elements[i]));
+                    filters.Add(this.GetFilter(elements[i]));
                 }
-                
+                collection.DeleteMany(Builders<T>.Filter.And(filters.ToArray<FilterDefinition<T>>()));
+
             }
         }
 
-        public override T Get(Filter<F> filter, T element)
+
+
+        public override void Delete(T element)
         {
-            throw new NotImplementedException();
+            var collection = this.GetCollection();
+            if ( element == null)
+            {
+                throw new Exception("The element parameter can't be null");
+            }
+            else
+            {
+                    collection.DeleteOne(this.GetFilter(element));
+
+            }
+        }
+
+        public override List<T> Get(T element)
+        {
+            var collection = this.GetCollection();
+
+            var filter = this.GetFilter(element);
+            return collection.Find<T>(filter).ToList<T>();
         }
 
         public override void Insert(params T[] elements)
