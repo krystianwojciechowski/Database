@@ -1,95 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj": {}
+    "C:\\Users\\krywo\\source\\repos\\Database\\DatabaseTest\\DatabaseTest.csproj": {}
   },
   "projects": {
-    "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj": {
+    "C:\\Users\\krywo\\source\\repos\\Database\\DatabaseTest\\DatabaseTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj",
-        "projectName": "Database",
-        "projectPath": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj",
-        "packagesPath": "/Users/krystianwojciechowski/.nuget/packages/",
-        "outputPath": "/Users/krystianwojciechowski/Projects/Database/Database/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/krystianwojciechowski/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.15.0, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.1.8, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj",
+        "projectUniqueName": "C:\\Users\\krywo\\source\\repos\\Database\\DatabaseTest\\DatabaseTest.csproj",
         "projectName": "DatabaseTest",
-        "projectPath": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/DatabaseTest.csproj",
-        "packagesPath": "/Users/krystianwojciechowski/.nuget/packages/",
-        "outputPath": "/Users/krystianwojciechowski/Projects/Database/DatabaseTest/obj/",
+        "projectPath": "C:\\Users\\krywo\\source\\repos\\Database\\DatabaseTest\\DatabaseTest.csproj",
+        "packagesPath": "C:\\Users\\krywo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krywo\\source\\repos\\Database\\DatabaseTest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\vs\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/krystianwojciechowski/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\krywo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj": {
-                "projectPath": "/Users/krystianwojciechowski/Projects/Database/Database/Database.csproj"
+              "C:\\Users\\krywo\\source\\repos\\Database\\Database\\Database.csproj": {
+                "projectPath": "C:\\Users\\krywo\\source\\repos\\Database\\Database\\Database.csproj"
               }
             }
           }
@@ -144,7 +88,75 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\krywo\\source\\repos\\Database\\Database\\Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krywo\\source\\repos\\Database\\Database\\Database.csproj",
+        "projectName": "Database",
+        "projectPath": "C:\\Users\\krywo\\source\\repos\\Database\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\krywo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krywo\\source\\repos\\Database\\Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\vs\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\krywo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

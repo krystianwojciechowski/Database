@@ -1,8 +1,3 @@
-C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache
-C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.AssemblyInfoInputs.cache
-C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.AssemblyInfo.cs
-C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache
 /Users/krystianwojciechowski/Projects/Database/Database/bin/Debug/net6.0/Database.deps.json
 /Users/krystianwojciechowski/Projects/Database/Database/bin/Debug/net6.0/Database.dll
 /Users/krystianwojciechowski/Projects/Database/Database/bin/Debug/net6.0/Database.pdb
@@ -15,3 +10,15 @@ C:/Users/krywo/source/repos/Database/Database/obj/Debug/net6.0/Database.csproj.C
 /Users/krystianwojciechowski/Projects/Database/Database/obj/Debug/net6.0/refint/Database.dll
 /Users/krystianwojciechowski/Projects/Database/Database/obj/Debug/net6.0/Database.pdb
 /Users/krystianwojciechowski/Projects/Database/Database/obj/Debug/net6.0/ref/Database.dll
+C:\Users\krywo\source\repos\Database\Database\bin\Debug\net6.0\Database.deps.json
+C:\Users\krywo\source\repos\Database\Database\bin\Debug\net6.0\Database.dll
+C:\Users\krywo\source\repos\Database\Database\bin\Debug\net6.0\ref\Database.dll
+C:\Users\krywo\source\repos\Database\Database\bin\Debug\net6.0\Database.pdb
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.csproj.AssemblyReference.cache
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.AssemblyInfoInputs.cache
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.AssemblyInfo.cs
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.dll
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\ref\Database.dll
+C:\Users\krywo\source\repos\Database\Database\obj\Debug\net6.0\Database.pdb
